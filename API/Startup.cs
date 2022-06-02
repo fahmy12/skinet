@@ -1,3 +1,4 @@
+using Core.Interfaces;
 using Infrastructure.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -26,6 +27,7 @@ namespace API
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.AddScoped<IProductRepository, ProductRepository>();
             services.AddControllers();
             //@ 13 -> 1:40
             //we need to add StoreContext as a service so that we can use it in other parts of our application
