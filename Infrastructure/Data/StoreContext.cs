@@ -15,6 +15,12 @@ namespace Infrastructure.Data
         //an entity with an Id or got a list of all of the products.
         //When we specify our DbSet in this way, then this is what's going to allow us to query those entities.
         public DbSet<Product> Products { get; set; }
+        public DbSet<ProductBrand> ProductBrands { get; set; }
+        public DbSet<ProductType> ProductTypes { get; set; }
+        
+        
+        
+        
         
         
     }
